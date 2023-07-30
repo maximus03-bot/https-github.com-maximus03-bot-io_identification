@@ -1,6 +1,6 @@
 ﻿namespace IO_IDENTIFICATION
 {
-    partial class frm_impression
+    partial class frm_personne
     {
         /// <summary>
         /// Required designer variable.
@@ -30,17 +30,19 @@
         {
             this.SuspendLayout();
             // 
-            // frm_impression
+            // frm_personne
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(516, 371);
+            this.ClientSize = new System.Drawing.Size(555, 272);
             this.Font = new System.Drawing.Font("Arial", 12F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "frm_impression";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Impression";
+            this.MaximizeBox = false;
+            this.Name = "frm_personne";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Indentification de la personne";
             this.ResumeLayout(false);
 
         }

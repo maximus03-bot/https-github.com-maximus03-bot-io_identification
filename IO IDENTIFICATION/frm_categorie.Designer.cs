@@ -52,6 +52,7 @@
             // 
             // frm_categorie
             // 
+            this.AcceptButton = this.bt_enregistrer;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
@@ -60,11 +61,13 @@
             this.Controls.Add(this.txt_nom);
             this.Font = new System.Drawing.Font("Arial", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frm_categorie";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Catégorie";
+            this.Load += new System.EventHandler(this.frm_categorie_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

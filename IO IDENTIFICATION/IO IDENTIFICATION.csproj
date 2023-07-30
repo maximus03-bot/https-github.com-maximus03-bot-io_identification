@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clas_configuration.cs" />
     <Compile Include="frm_categorie.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,6 +57,18 @@
     </Compile>
     <Compile Include="frm_impression.Designer.cs">
       <DependentUpon>frm_impression.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_parametre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_parametre.Designer.cs">
+      <DependentUpon>frm_parametre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_personne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_personne.Designer.cs">
+      <DependentUpon>frm_personne.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_principal.cs">
       <SubType>Form</SubType>
@@ -76,6 +89,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_impression.resx">
       <DependentUpon>frm_impression.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_parametre.resx">
+      <DependentUpon>frm_parametre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_personne.resx">
+      <DependentUpon>frm_personne.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_principal.resx">
       <DependentUpon>frm_principal.cs</DependentUpon>
@@ -114,6 +133,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="a faire.txt" />
+    <Content Include="io_identification.mdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

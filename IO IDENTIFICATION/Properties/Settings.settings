@@ -1,7 +1,12 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="IO_IDENTIFICATION.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="chemin_bdd" Type="System.String" Scope="User">
+      <Value Profile="(Default)">|DataDirectory|\io_identification.mdb</Value>
+    </Setting>
+    <Setting Name="nom_piece" Type="System.String" Scope="User">
+      <Value Profile="(Default)">badge d'identité</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

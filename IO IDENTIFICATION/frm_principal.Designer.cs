@@ -38,7 +38,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgv_indentification = new System.Windows.Forms.DataGridView();
+            this.dgv_personne = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,28 +51,29 @@
             this.col_identite_mod = new System.Windows.Forms.DataGridViewImageColumn();
             this.col_identite_sup = new System.Windows.Forms.DataGridViewImageColumn();
             this.Panel2 = new System.Windows.Forms.Panel();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bt_parametre = new System.Windows.Forms.Button();
+            this.cob_impression = new System.Windows.Forms.ComboBox();
+            this.bt_imprimer = new System.Windows.Forms.Button();
+            this.bt_ajouter_sous_categorie = new System.Windows.Forms.Button();
+            this.bt_ajouter_categorie = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cob_genre = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.cob_genre = new System.Windows.Forms.ComboBox();
-            this.bt_ajouter = new System.Windows.Forms.Button();
+            this.cob_categorie = new System.Windows.Forms.ComboBox();
+            this.cob_sous_categorie = new System.Windows.Forms.ComboBox();
+            this.bt_ajouter_personne = new System.Windows.Forms.Button();
             this.txt_recherche = new System.Windows.Forms.TextBox();
             this.Label3 = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgv_sous_categorie = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn7 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_categorie = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,25 +82,25 @@
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_indentification)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_personne)).BeginInit();
             this.Panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_sous_categorie)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_categorie)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgv_indentification
+            // dgv_personne
             // 
-            this.dgv_indentification.AllowUserToAddRows = false;
-            this.dgv_indentification.AllowUserToDeleteRows = false;
-            this.dgv_indentification.AllowUserToResizeColumns = false;
-            this.dgv_indentification.AllowUserToResizeRows = false;
+            this.dgv_personne.AllowUserToAddRows = false;
+            this.dgv_personne.AllowUserToDeleteRows = false;
+            this.dgv_personne.AllowUserToResizeColumns = false;
+            this.dgv_personne.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.dgv_indentification.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_indentification.BackgroundColor = System.Drawing.Color.LightGray;
-            this.dgv_indentification.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgv_indentification.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gray;
+            this.dgv_personne.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_personne.BackgroundColor = System.Drawing.Color.LightGray;
+            this.dgv_personne.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgv_personne.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkGray;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -107,9 +108,9 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_indentification.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_indentification.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_indentification.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_personne.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_personne.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_personne.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column6,
             this.Column2,
@@ -125,22 +126,22 @@
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_indentification.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgv_indentification.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_indentification.EnableHeadersVisualStyles = false;
-            this.dgv_indentification.GridColor = System.Drawing.Color.Black;
-            this.dgv_indentification.Location = new System.Drawing.Point(0, 123);
-            this.dgv_indentification.Margin = new System.Windows.Forms.Padding(4);
-            this.dgv_indentification.Name = "dgv_indentification";
-            this.dgv_indentification.ReadOnly = true;
-            this.dgv_indentification.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgv_indentification.RowHeadersVisible = false;
-            this.dgv_indentification.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_indentification.Size = new System.Drawing.Size(831, 538);
-            this.dgv_indentification.TabIndex = 8;
+            this.dgv_personne.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_personne.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_personne.EnableHeadersVisualStyles = false;
+            this.dgv_personne.GridColor = System.Drawing.Color.Black;
+            this.dgv_personne.Location = new System.Drawing.Point(0, 123);
+            this.dgv_personne.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_personne.Name = "dgv_personne";
+            this.dgv_personne.ReadOnly = true;
+            this.dgv_personne.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgv_personne.RowHeadersVisible = false;
+            this.dgv_personne.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_personne.Size = new System.Drawing.Size(831, 538);
+            this.dgv_personne.TabIndex = 8;
             // 
             // Column1
             // 
@@ -233,17 +234,18 @@
             // 
             // Panel2
             // 
-            this.Panel2.Controls.Add(this.comboBox3);
-            this.Panel2.Controls.Add(this.button3);
-            this.Panel2.Controls.Add(this.button2);
-            this.Panel2.Controls.Add(this.button1);
+            this.Panel2.Controls.Add(this.bt_parametre);
+            this.Panel2.Controls.Add(this.cob_impression);
+            this.Panel2.Controls.Add(this.bt_imprimer);
+            this.Panel2.Controls.Add(this.bt_ajouter_sous_categorie);
+            this.Panel2.Controls.Add(this.bt_ajouter_categorie);
             this.Panel2.Controls.Add(this.label5);
-            this.Panel2.Controls.Add(this.comboBox2);
+            this.Panel2.Controls.Add(this.cob_genre);
             this.Panel2.Controls.Add(this.label4);
             this.Panel2.Controls.Add(this.label2);
-            this.Panel2.Controls.Add(this.comboBox1);
-            this.Panel2.Controls.Add(this.cob_genre);
-            this.Panel2.Controls.Add(this.bt_ajouter);
+            this.Panel2.Controls.Add(this.cob_categorie);
+            this.Panel2.Controls.Add(this.cob_sous_categorie);
+            this.Panel2.Controls.Add(this.bt_ajouter_personne);
             this.Panel2.Controls.Add(this.txt_recherche);
             this.Panel2.Controls.Add(this.Label3);
             this.Panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -253,59 +255,72 @@
             this.Panel2.Size = new System.Drawing.Size(1184, 83);
             this.Panel2.TabIndex = 7;
             // 
-            // comboBox3
+            // bt_parametre
             // 
-            this.comboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Tous",
-            "Frere",
-            "Soeur"});
-            this.comboBox3.Location = new System.Drawing.Point(434, 47);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(240, 25);
-            this.comboBox3.TabIndex = 48;
+            this.bt_parametre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bt_parametre.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_parametre.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_parametre.Image = global::IO_IDENTIFICATION.Properties.Resources.settings_2;
+            this.bt_parametre.Location = new System.Drawing.Point(1146, 45);
+            this.bt_parametre.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_parametre.Name = "bt_parametre";
+            this.bt_parametre.Size = new System.Drawing.Size(30, 30);
+            this.bt_parametre.TabIndex = 49;
+            this.bt_parametre.UseVisualStyleBackColor = true;
+            this.bt_parametre.Click += new System.EventHandler(this.bt_parametre_Click);
             // 
-            // button3
+            // cob_impression
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(353, 45);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(324, 30);
-            this.button3.TabIndex = 47;
-            this.button3.Text = "Imprimer";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
+            this.cob_impression.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cob_impression.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cob_impression.FormattingEnabled = true;
+            this.cob_impression.Location = new System.Drawing.Point(434, 47);
+            this.cob_impression.Name = "cob_impression";
+            this.cob_impression.Size = new System.Drawing.Size(240, 25);
+            this.cob_impression.TabIndex = 48;
             // 
-            // button2
+            // bt_imprimer
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(684, 45);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(228, 30);
-            this.button2.TabIndex = 46;
-            this.button2.Text = "Ajouter une sous-categorie";
-            this.button2.UseVisualStyleBackColor = true;
+            this.bt_imprimer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bt_imprimer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_imprimer.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_imprimer.Location = new System.Drawing.Point(353, 45);
+            this.bt_imprimer.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_imprimer.Name = "bt_imprimer";
+            this.bt_imprimer.Size = new System.Drawing.Size(324, 30);
+            this.bt_imprimer.TabIndex = 47;
+            this.bt_imprimer.Text = "Imprimer";
+            this.bt_imprimer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_imprimer.UseVisualStyleBackColor = true;
+            this.bt_imprimer.Click += new System.EventHandler(this.bt_imprimer_Click);
             // 
-            // button1
+            // bt_ajouter_sous_categorie
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(926, 45);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(250, 30);
-            this.button1.TabIndex = 45;
-            this.button1.Text = "Ajouter une categorie";
-            this.button1.UseVisualStyleBackColor = true;
+            this.bt_ajouter_sous_categorie.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bt_ajouter_sous_categorie.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_ajouter_sous_categorie.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_ajouter_sous_categorie.Location = new System.Drawing.Point(684, 45);
+            this.bt_ajouter_sous_categorie.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_ajouter_sous_categorie.Name = "bt_ajouter_sous_categorie";
+            this.bt_ajouter_sous_categorie.Size = new System.Drawing.Size(228, 30);
+            this.bt_ajouter_sous_categorie.TabIndex = 46;
+            this.bt_ajouter_sous_categorie.Text = "Ajouter une sous-categorie";
+            this.bt_ajouter_sous_categorie.UseVisualStyleBackColor = true;
+            this.bt_ajouter_sous_categorie.Click += new System.EventHandler(this.bt_ajouter_sous_categorie_Click);
+            // 
+            // bt_ajouter_categorie
+            // 
+            this.bt_ajouter_categorie.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bt_ajouter_categorie.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_ajouter_categorie.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_ajouter_categorie.Location = new System.Drawing.Point(926, 45);
+            this.bt_ajouter_categorie.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_ajouter_categorie.Name = "bt_ajouter_categorie";
+            this.bt_ajouter_categorie.Size = new System.Drawing.Size(212, 30);
+            this.bt_ajouter_categorie.TabIndex = 45;
+            this.bt_ajouter_categorie.Text = "Ajouter une categorie";
+            this.bt_ajouter_categorie.UseVisualStyleBackColor = true;
+            this.bt_ajouter_categorie.Click += new System.EventHandler(this.bt_ajouter_categorie_Click);
             // 
             // label5
             // 
@@ -318,19 +333,16 @@
             this.label5.TabIndex = 44;
             this.label5.Text = "Genre";
             // 
-            // comboBox2
+            // cob_genre
             // 
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Tous",
-            "Frere",
-            "Soeur"});
-            this.comboBox2.Location = new System.Drawing.Point(1106, 11);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(70, 25);
-            this.comboBox2.TabIndex = 43;
+            this.cob_genre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cob_genre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cob_genre.FormattingEnabled = true;
+            this.cob_genre.Location = new System.Drawing.Point(1106, 11);
+            this.cob_genre.Name = "cob_genre";
+            this.cob_genre.Size = new System.Drawing.Size(70, 25);
+            this.cob_genre.TabIndex = 43;
+            this.cob_genre.SelectedIndexChanged += new System.EventHandler(this.cob_genre_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -354,47 +366,42 @@
             this.label2.TabIndex = 41;
             this.label2.Text = "Categorie";
             // 
-            // comboBox1
+            // cob_categorie
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Tous",
-            "Frere",
-            "Soeur"});
-            this.comboBox1.Location = new System.Drawing.Point(427, 11);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(250, 25);
-            this.comboBox1.TabIndex = 40;
+            this.cob_categorie.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cob_categorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cob_categorie.FormattingEnabled = true;
+            this.cob_categorie.Location = new System.Drawing.Point(427, 11);
+            this.cob_categorie.Name = "cob_categorie";
+            this.cob_categorie.Size = new System.Drawing.Size(250, 25);
+            this.cob_categorie.TabIndex = 40;
+            this.cob_categorie.SelectedIndexChanged += new System.EventHandler(this.cob_categorie_SelectedIndexChanged);
             // 
-            // cob_genre
+            // cob_sous_categorie
             // 
-            this.cob_genre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cob_genre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cob_genre.FormattingEnabled = true;
-            this.cob_genre.Items.AddRange(new object[] {
-            "Tous",
-            "Frere",
-            "Soeur"});
-            this.cob_genre.Location = new System.Drawing.Point(795, 11);
-            this.cob_genre.Name = "cob_genre";
-            this.cob_genre.Size = new System.Drawing.Size(250, 25);
-            this.cob_genre.TabIndex = 39;
+            this.cob_sous_categorie.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cob_sous_categorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cob_sous_categorie.FormattingEnabled = true;
+            this.cob_sous_categorie.Location = new System.Drawing.Point(795, 11);
+            this.cob_sous_categorie.Name = "cob_sous_categorie";
+            this.cob_sous_categorie.Size = new System.Drawing.Size(250, 25);
+            this.cob_sous_categorie.TabIndex = 39;
+            this.cob_sous_categorie.SelectedIndexChanged += new System.EventHandler(this.cob_sous_categorie_SelectedIndexChanged);
             // 
-            // bt_ajouter
+            // bt_ajouter_personne
             // 
-            this.bt_ajouter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.bt_ajouter_personne.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bt_ajouter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_ajouter.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_ajouter.Location = new System.Drawing.Point(8, 45);
-            this.bt_ajouter.Margin = new System.Windows.Forms.Padding(4);
-            this.bt_ajouter.Name = "bt_ajouter";
-            this.bt_ajouter.Size = new System.Drawing.Size(337, 30);
-            this.bt_ajouter.TabIndex = 4;
-            this.bt_ajouter.Text = "Ajouter une personne";
-            this.bt_ajouter.UseVisualStyleBackColor = true;
+            this.bt_ajouter_personne.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_ajouter_personne.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_ajouter_personne.Location = new System.Drawing.Point(8, 45);
+            this.bt_ajouter_personne.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_ajouter_personne.Name = "bt_ajouter_personne";
+            this.bt_ajouter_personne.Size = new System.Drawing.Size(337, 30);
+            this.bt_ajouter_personne.TabIndex = 4;
+            this.bt_ajouter_personne.Text = "Ajouter une personne";
+            this.bt_ajouter_personne.UseVisualStyleBackColor = true;
+            this.bt_ajouter_personne.Click += new System.EventHandler(this.bt_ajouter_personne_Click);
             // 
             // txt_recherche
             // 
@@ -405,6 +412,7 @@
             this.txt_recherche.Name = "txt_recherche";
             this.txt_recherche.Size = new System.Drawing.Size(251, 24);
             this.txt_recherche.TabIndex = 0;
+            this.txt_recherche.TextChanged += new System.EventHandler(this.txt_recherche_TextChanged);
             // 
             // Label3
             // 
@@ -421,38 +429,38 @@
             this.Label1.BackColor = System.Drawing.Color.LightGray;
             this.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Label1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label1.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label1.Location = new System.Drawing.Point(0, 0);
             this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(1184, 40);
             this.Label1.TabIndex = 6;
-            this.Label1.Text = "IDENTIFICATION";
+            this.Label1.Text = "I.O. IDENTIFICATION";
             this.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.Controls.Add(this.dataGridView2);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dgv_sous_categorie);
+            this.panel1.Controls.Add(this.dgv_categorie);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(831, 123);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(353, 538);
             this.panel1.TabIndex = 9;
             // 
-            // dataGridView2
+            // dgv_sous_categorie
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AllowUserToResizeColumns = false;
-            this.dataGridView2.AllowUserToResizeRows = false;
+            this.dgv_sous_categorie.AllowUserToAddRows = false;
+            this.dgv_sous_categorie.AllowUserToDeleteRows = false;
+            this.dgv_sous_categorie.AllowUserToResizeColumns = false;
+            this.dgv_sous_categorie.AllowUserToResizeRows = false;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.LightGray;
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Gray;
+            this.dgv_sous_categorie.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgv_sous_categorie.BackgroundColor = System.Drawing.Color.LightGray;
+            this.dgv_sous_categorie.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgv_sous_categorie.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.DarkGray;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -460,9 +468,9 @@
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_sous_categorie.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgv_sous_categorie.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_sous_categorie.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
@@ -472,22 +480,22 @@
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle7;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.EnableHeadersVisualStyles = false;
-            this.dataGridView2.GridColor = System.Drawing.Color.Black;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 271);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(353, 267);
-            this.dataGridView2.TabIndex = 10;
+            this.dgv_sous_categorie.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dgv_sous_categorie.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_sous_categorie.EnableHeadersVisualStyles = false;
+            this.dgv_sous_categorie.GridColor = System.Drawing.Color.Black;
+            this.dgv_sous_categorie.Location = new System.Drawing.Point(0, 271);
+            this.dgv_sous_categorie.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_sous_categorie.Name = "dgv_sous_categorie";
+            this.dgv_sous_categorie.ReadOnly = true;
+            this.dgv_sous_categorie.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgv_sous_categorie.RowHeadersVisible = false;
+            this.dgv_sous_categorie.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_sous_categorie.Size = new System.Drawing.Size(353, 267);
+            this.dgv_sous_categorie.TabIndex = 10;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -527,18 +535,18 @@
             this.dataGridViewImageColumn7.ReadOnly = true;
             this.dataGridViewImageColumn7.Width = 40;
             // 
-            // dataGridView1
+            // dgv_categorie
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dgv_categorie.AllowUserToAddRows = false;
+            this.dgv_categorie.AllowUserToDeleteRows = false;
+            this.dgv_categorie.AllowUserToResizeColumns = false;
+            this.dgv_categorie.AllowUserToResizeRows = false;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightGray;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Gray;
+            this.dgv_categorie.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgv_categorie.BackgroundColor = System.Drawing.Color.LightGray;
+            this.dgv_categorie.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgv_categorie.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = System.Drawing.Color.DarkGray;
             dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -546,9 +554,9 @@
             dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_categorie.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgv_categorie.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_categorie.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
@@ -558,22 +566,22 @@
             dataGridViewCellStyle10.BackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle10.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle10;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.GridColor = System.Drawing.Color.Black;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(353, 271);
-            this.dataGridView1.TabIndex = 9;
+            this.dgv_categorie.DefaultCellStyle = dataGridViewCellStyle10;
+            this.dgv_categorie.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgv_categorie.EnableHeadersVisualStyles = false;
+            this.dgv_categorie.GridColor = System.Drawing.Color.Black;
+            this.dgv_categorie.Location = new System.Drawing.Point(0, 0);
+            this.dgv_categorie.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_categorie.Name = "dgv_categorie";
+            this.dgv_categorie.ReadOnly = true;
+            this.dgv_categorie.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgv_categorie.RowHeadersVisible = false;
+            this.dgv_categorie.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_categorie.Size = new System.Drawing.Size(353, 271);
+            this.dgv_categorie.TabIndex = 9;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -640,7 +648,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1184, 661);
-            this.Controls.Add(this.dgv_indentification);
+            this.Controls.Add(this.dgv_personne);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Panel2);
             this.Controls.Add(this.Label1);
@@ -650,30 +658,31 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PRINCIPAL";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_indentification)).EndInit();
+            this.Load += new System.EventHandler(this.frm_principal_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_personne)).EndInit();
             this.Panel2.ResumeLayout(false);
             this.Panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_sous_categorie)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_categorie)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        internal System.Windows.Forms.DataGridView dgv_indentification;
+        internal System.Windows.Forms.DataGridView dgv_personne;
         internal System.Windows.Forms.Panel Panel2;
-        internal System.Windows.Forms.Button bt_ajouter;
+        internal System.Windows.Forms.Button bt_ajouter_personne;
         internal System.Windows.Forms.TextBox txt_recherche;
         internal System.Windows.Forms.Label Label3;
         internal System.Windows.Forms.Label Label1;
         internal System.Windows.Forms.Label label5;
-        internal System.Windows.Forms.ComboBox comboBox2;
+        internal System.Windows.Forms.ComboBox cob_genre;
         internal System.Windows.Forms.Label label4;
         internal System.Windows.Forms.Label label2;
-        internal System.Windows.Forms.ComboBox comboBox1;
-        internal System.Windows.Forms.ComboBox cob_genre;
+        internal System.Windows.Forms.ComboBox cob_categorie;
+        internal System.Windows.Forms.ComboBox cob_sous_categorie;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
@@ -686,16 +695,16 @@
         private System.Windows.Forms.DataGridViewImageColumn col_identite_impr;
         private System.Windows.Forms.DataGridViewImageColumn col_identite_mod;
         private System.Windows.Forms.DataGridViewImageColumn col_identite_sup;
-        internal System.Windows.Forms.Button button3;
-        internal System.Windows.Forms.Button button2;
-        internal System.Windows.Forms.Button button1;
-        internal System.Windows.Forms.DataGridView dataGridView2;
+        internal System.Windows.Forms.Button bt_imprimer;
+        internal System.Windows.Forms.Button bt_ajouter_sous_categorie;
+        internal System.Windows.Forms.Button bt_ajouter_categorie;
+        internal System.Windows.Forms.DataGridView dgv_sous_categorie;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn4;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn7;
-        internal System.Windows.Forms.DataGridView dataGridView1;
+        internal System.Windows.Forms.DataGridView dgv_categorie;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -704,7 +713,8 @@
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn3;
-        internal System.Windows.Forms.ComboBox comboBox3;
+        internal System.Windows.Forms.ComboBox cob_impression;
+        internal System.Windows.Forms.Button bt_parametre;
     }
 }
 

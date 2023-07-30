@@ -7,20 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static IO_IDENTIFICATION.clas_configuration;
 
 namespace IO_IDENTIFICATION
 {
-    public partial class frm_categorie : Form
+    public partial class frm_personne : Form
     {
-        public frm_categorie()
+        public frm_personne()
         {
             InitializeComponent();
-        }
-
-        private void frm_categorie_Load(object sender, EventArgs e)
-        {
-            suggestion("tbl_categorie", "cat_nom", txt_nom);
         }
     }
 }

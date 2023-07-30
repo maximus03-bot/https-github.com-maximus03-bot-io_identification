@@ -1,0 +1,19 @@
+﻿
+- rempissage categorie
+- remplissage sous categorie
+- remplissage personnes
+
+- modelisation formulaire personne et parametre
+- ajustement des parametre : id, nom entite, nom piece, info entite, choix de la base des données, logo entite
+- modelisation du forlulaire d'enregistrement
+
+- enregistrement, modification et suppression categorie
+- enregistrement, modification et suppression sous categorie
+- enregistrement, modification et suppression personnes
+
+- impression liste partielle
+- impression liste complete
+- impression liste piece
+
+
+- choix icone, publication et essaie

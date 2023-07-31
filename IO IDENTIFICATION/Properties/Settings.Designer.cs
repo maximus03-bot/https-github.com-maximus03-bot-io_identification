@@ -37,13 +37,25 @@ namespace IO_IDENTIFICATION.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("badge d\'identité")]
-        public string nom_piece {
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public int id_entite {
             get {
-                return ((string)(this["nom_piece"]));
+                return ((int)(this["id_entite"]));
             }
             set {
-                this["nom_piece"] = value;
+                this["id_entite"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("type 1")]
+        public string type_piece {
+            get {
+                return ((string)(this["type_piece"]));
+            }
+            set {
+                this["type_piece"] = value;
             }
         }
     }

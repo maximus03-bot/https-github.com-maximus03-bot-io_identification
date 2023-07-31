@@ -46,11 +46,13 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_identite_impr = new System.Windows.Forms.DataGridViewImageColumn();
-            this.col_identite_mod = new System.Windows.Forms.DataGridViewImageColumn();
-            this.col_identite_sup = new System.Windows.Forms.DataGridViewImageColumn();
+            this.col_prs_stat = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.col_prs_impr = new System.Windows.Forms.DataGridViewImageColumn();
+            this.col_prs_mod = new System.Windows.Forms.DataGridViewImageColumn();
+            this.col_prs_sup = new System.Windows.Forms.DataGridViewImageColumn();
             this.Panel2 = new System.Windows.Forms.Panel();
+            this.lab_sous_cat_id = new System.Windows.Forms.Label();
+            this.lab_cat_id = new System.Windows.Forms.Label();
             this.bt_parametre = new System.Windows.Forms.Button();
             this.cob_impression = new System.Windows.Forms.ComboBox();
             this.bt_imprimer = new System.Windows.Forms.Button();
@@ -65,20 +67,20 @@
             this.bt_ajouter_personne = new System.Windows.Forms.Button();
             this.txt_recherche = new System.Windows.Forms.TextBox();
             this.Label3 = new System.Windows.Forms.Label();
-            this.Label1 = new System.Windows.Forms.Label();
+            this.lab_titre = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgv_sous_categorie = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn7 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.col_sous_cat_mod = new System.Windows.Forms.DataGridViewImageColumn();
+            this.col_sous_cat_sup = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgv_categorie = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn5 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn6 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.col_cat_mod = new System.Windows.Forms.DataGridViewImageColumn();
+            this.col_cat_sup = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -98,6 +100,7 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gray;
             this.dgv_personne.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_personne.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_personne.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgv_personne.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_personne.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -118,10 +121,10 @@
             this.Column4,
             this.Column7,
             this.Column8,
-            this.Column5,
-            this.col_identite_impr,
-            this.col_identite_mod,
-            this.col_identite_sup});
+            this.col_prs_stat,
+            this.col_prs_impr,
+            this.col_prs_mod,
+            this.col_prs_sup});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -142,6 +145,7 @@
             this.dgv_personne.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_personne.Size = new System.Drawing.Size(831, 538);
             this.dgv_personne.TabIndex = 8;
+            this.dgv_personne.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_personne_CellContentClick);
             // 
             // Column1
             // 
@@ -160,15 +164,14 @@
             // 
             // Column2
             // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column2.HeaderText = "Nom complet";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 119;
             // 
             // Column3
             // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(3);
             this.Column3.DefaultCellStyle = dataGridViewCellStyle3;
@@ -201,39 +204,43 @@
             this.Column8.ReadOnly = true;
             this.Column8.Width = 131;
             // 
-            // Column5
+            // col_prs_stat
             // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.HeaderText = "Adresse";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
+            this.col_prs_stat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.col_prs_stat.HeaderText = "statut";
+            this.col_prs_stat.LinkColor = System.Drawing.Color.Black;
+            this.col_prs_stat.Name = "col_prs_stat";
+            this.col_prs_stat.ReadOnly = true;
+            this.col_prs_stat.Width = 49;
             // 
-            // col_identite_impr
+            // col_prs_impr
             // 
-            this.col_identite_impr.HeaderText = "";
-            this.col_identite_impr.Image = global::IO_IDENTIFICATION.Properties.Resources.print;
-            this.col_identite_impr.Name = "col_identite_impr";
-            this.col_identite_impr.ReadOnly = true;
-            this.col_identite_impr.Width = 40;
+            this.col_prs_impr.HeaderText = "";
+            this.col_prs_impr.Image = global::IO_IDENTIFICATION.Properties.Resources.print;
+            this.col_prs_impr.Name = "col_prs_impr";
+            this.col_prs_impr.ReadOnly = true;
+            this.col_prs_impr.Width = 40;
             // 
-            // col_identite_mod
+            // col_prs_mod
             // 
-            this.col_identite_mod.HeaderText = "";
-            this.col_identite_mod.Image = global::IO_IDENTIFICATION.Properties.Resources.pen_1;
-            this.col_identite_mod.Name = "col_identite_mod";
-            this.col_identite_mod.ReadOnly = true;
-            this.col_identite_mod.Width = 40;
+            this.col_prs_mod.HeaderText = "";
+            this.col_prs_mod.Image = global::IO_IDENTIFICATION.Properties.Resources.pen_1;
+            this.col_prs_mod.Name = "col_prs_mod";
+            this.col_prs_mod.ReadOnly = true;
+            this.col_prs_mod.Width = 40;
             // 
-            // col_identite_sup
+            // col_prs_sup
             // 
-            this.col_identite_sup.HeaderText = "";
-            this.col_identite_sup.Image = global::IO_IDENTIFICATION.Properties.Resources.delete_1;
-            this.col_identite_sup.Name = "col_identite_sup";
-            this.col_identite_sup.ReadOnly = true;
-            this.col_identite_sup.Width = 40;
+            this.col_prs_sup.HeaderText = "";
+            this.col_prs_sup.Image = global::IO_IDENTIFICATION.Properties.Resources.delete_1;
+            this.col_prs_sup.Name = "col_prs_sup";
+            this.col_prs_sup.ReadOnly = true;
+            this.col_prs_sup.Width = 40;
             // 
             // Panel2
             // 
+            this.Panel2.Controls.Add(this.lab_sous_cat_id);
+            this.Panel2.Controls.Add(this.lab_cat_id);
             this.Panel2.Controls.Add(this.bt_parametre);
             this.Panel2.Controls.Add(this.cob_impression);
             this.Panel2.Controls.Add(this.bt_imprimer);
@@ -254,6 +261,30 @@
             this.Panel2.Name = "Panel2";
             this.Panel2.Size = new System.Drawing.Size(1184, 83);
             this.Panel2.TabIndex = 7;
+            // 
+            // lab_sous_cat_id
+            // 
+            this.lab_sous_cat_id.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lab_sous_cat_id.AutoSize = true;
+            this.lab_sous_cat_id.Location = new System.Drawing.Point(842, 14);
+            this.lab_sous_cat_id.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lab_sous_cat_id.Name = "lab_sous_cat_id";
+            this.lab_sous_cat_id.Size = new System.Drawing.Size(132, 17);
+            this.lab_sous_cat_id.TabIndex = 51;
+            this.lab_sous_cat_id.Text = "Sous_Categorie_id";
+            this.lab_sous_cat_id.Visible = false;
+            // 
+            // lab_cat_id
+            // 
+            this.lab_cat_id.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lab_cat_id.AutoSize = true;
+            this.lab_cat_id.Location = new System.Drawing.Point(540, 14);
+            this.lab_cat_id.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lab_cat_id.Name = "lab_cat_id";
+            this.lab_cat_id.Size = new System.Drawing.Size(90, 17);
+            this.lab_cat_id.TabIndex = 50;
+            this.lab_cat_id.Text = "Categorie_id";
+            this.lab_cat_id.Visible = false;
             // 
             // bt_parametre
             // 
@@ -424,19 +455,19 @@
             this.Label3.TabIndex = 3;
             this.Label3.Text = "Recherche";
             // 
-            // Label1
+            // lab_titre
             // 
-            this.Label1.BackColor = System.Drawing.Color.LightGray;
-            this.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Label1.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(0, 0);
-            this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(1184, 40);
-            this.Label1.TabIndex = 6;
-            this.Label1.Text = "I.O. IDENTIFICATION";
-            this.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lab_titre.BackColor = System.Drawing.Color.LightGray;
+            this.lab_titre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lab_titre.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lab_titre.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_titre.Location = new System.Drawing.Point(0, 0);
+            this.lab_titre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lab_titre.Name = "lab_titre";
+            this.lab_titre.Size = new System.Drawing.Size(1184, 40);
+            this.lab_titre.TabIndex = 6;
+            this.lab_titre.Text = "I.O. IDENTIFICATION";
+            this.lab_titre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
@@ -458,6 +489,7 @@
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Gray;
             this.dgv_sous_categorie.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgv_sous_categorie.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_sous_categorie.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgv_sous_categorie.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_sous_categorie.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -474,8 +506,8 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
-            this.dataGridViewImageColumn4,
-            this.dataGridViewImageColumn7});
+            this.col_sous_cat_mod,
+            this.col_sous_cat_sup});
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -496,6 +528,7 @@
             this.dgv_sous_categorie.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_sous_categorie.Size = new System.Drawing.Size(353, 267);
             this.dgv_sous_categorie.TabIndex = 10;
+            this.dgv_sous_categorie.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_sous_categorie_CellContentClick);
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -519,21 +552,21 @@
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
-            // dataGridViewImageColumn4
+            // col_sous_cat_mod
             // 
-            this.dataGridViewImageColumn4.HeaderText = "";
-            this.dataGridViewImageColumn4.Image = global::IO_IDENTIFICATION.Properties.Resources.pen_1;
-            this.dataGridViewImageColumn4.Name = "dataGridViewImageColumn4";
-            this.dataGridViewImageColumn4.ReadOnly = true;
-            this.dataGridViewImageColumn4.Width = 40;
+            this.col_sous_cat_mod.HeaderText = "";
+            this.col_sous_cat_mod.Image = global::IO_IDENTIFICATION.Properties.Resources.pen_1;
+            this.col_sous_cat_mod.Name = "col_sous_cat_mod";
+            this.col_sous_cat_mod.ReadOnly = true;
+            this.col_sous_cat_mod.Width = 40;
             // 
-            // dataGridViewImageColumn7
+            // col_sous_cat_sup
             // 
-            this.dataGridViewImageColumn7.HeaderText = "";
-            this.dataGridViewImageColumn7.Image = global::IO_IDENTIFICATION.Properties.Resources.delete_1;
-            this.dataGridViewImageColumn7.Name = "dataGridViewImageColumn7";
-            this.dataGridViewImageColumn7.ReadOnly = true;
-            this.dataGridViewImageColumn7.Width = 40;
+            this.col_sous_cat_sup.HeaderText = "";
+            this.col_sous_cat_sup.Image = global::IO_IDENTIFICATION.Properties.Resources.delete_1;
+            this.col_sous_cat_sup.Name = "col_sous_cat_sup";
+            this.col_sous_cat_sup.ReadOnly = true;
+            this.col_sous_cat_sup.Width = 40;
             // 
             // dgv_categorie
             // 
@@ -544,6 +577,7 @@
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Gray;
             this.dgv_categorie.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgv_categorie.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_categorie.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgv_categorie.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_categorie.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -560,8 +594,8 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
-            this.dataGridViewImageColumn5,
-            this.dataGridViewImageColumn6});
+            this.col_cat_mod,
+            this.col_cat_sup});
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle10.BackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle10.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -582,6 +616,7 @@
             this.dgv_categorie.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_categorie.Size = new System.Drawing.Size(353, 271);
             this.dgv_categorie.TabIndex = 9;
+            this.dgv_categorie.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_categorie_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -605,21 +640,21 @@
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
-            // dataGridViewImageColumn5
+            // col_cat_mod
             // 
-            this.dataGridViewImageColumn5.HeaderText = "";
-            this.dataGridViewImageColumn5.Image = global::IO_IDENTIFICATION.Properties.Resources.pen_1;
-            this.dataGridViewImageColumn5.Name = "dataGridViewImageColumn5";
-            this.dataGridViewImageColumn5.ReadOnly = true;
-            this.dataGridViewImageColumn5.Width = 40;
+            this.col_cat_mod.HeaderText = "";
+            this.col_cat_mod.Image = global::IO_IDENTIFICATION.Properties.Resources.pen_1;
+            this.col_cat_mod.Name = "col_cat_mod";
+            this.col_cat_mod.ReadOnly = true;
+            this.col_cat_mod.Width = 40;
             // 
-            // dataGridViewImageColumn6
+            // col_cat_sup
             // 
-            this.dataGridViewImageColumn6.HeaderText = "";
-            this.dataGridViewImageColumn6.Image = global::IO_IDENTIFICATION.Properties.Resources.delete_1;
-            this.dataGridViewImageColumn6.Name = "dataGridViewImageColumn6";
-            this.dataGridViewImageColumn6.ReadOnly = true;
-            this.dataGridViewImageColumn6.Width = 40;
+            this.col_cat_sup.HeaderText = "";
+            this.col_cat_sup.Image = global::IO_IDENTIFICATION.Properties.Resources.delete_1;
+            this.col_cat_sup.Name = "col_cat_sup";
+            this.col_cat_sup.ReadOnly = true;
+            this.col_cat_sup.Width = 40;
             // 
             // dataGridViewImageColumn1
             // 
@@ -651,9 +686,10 @@
             this.Controls.Add(this.dgv_personne);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Panel2);
-            this.Controls.Add(this.Label1);
+            this.Controls.Add(this.lab_titre);
             this.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(1000, 700);
             this.Name = "frm_principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PRINCIPAL";
@@ -676,7 +712,7 @@
         internal System.Windows.Forms.Button bt_ajouter_personne;
         internal System.Windows.Forms.TextBox txt_recherche;
         internal System.Windows.Forms.Label Label3;
-        internal System.Windows.Forms.Label Label1;
+        internal System.Windows.Forms.Label lab_titre;
         internal System.Windows.Forms.Label label5;
         internal System.Windows.Forms.ComboBox cob_genre;
         internal System.Windows.Forms.Label label4;
@@ -684,6 +720,28 @@
         internal System.Windows.Forms.ComboBox cob_categorie;
         internal System.Windows.Forms.ComboBox cob_sous_categorie;
         private System.Windows.Forms.Panel panel1;
+        internal System.Windows.Forms.Button bt_imprimer;
+        internal System.Windows.Forms.Button bt_ajouter_sous_categorie;
+        internal System.Windows.Forms.Button bt_ajouter_categorie;
+        internal System.Windows.Forms.DataGridView dgv_sous_categorie;
+        internal System.Windows.Forms.DataGridView dgv_categorie;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn3;
+        internal System.Windows.Forms.ComboBox cob_impression;
+        internal System.Windows.Forms.Button bt_parametre;
+        internal System.Windows.Forms.Label lab_cat_id;
+        internal System.Windows.Forms.Label lab_sous_cat_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewImageColumn col_sous_cat_mod;
+        private System.Windows.Forms.DataGridViewImageColumn col_sous_cat_sup;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewImageColumn col_cat_mod;
+        private System.Windows.Forms.DataGridViewImageColumn col_cat_sup;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -691,30 +749,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewImageColumn col_identite_impr;
-        private System.Windows.Forms.DataGridViewImageColumn col_identite_mod;
-        private System.Windows.Forms.DataGridViewImageColumn col_identite_sup;
-        internal System.Windows.Forms.Button bt_imprimer;
-        internal System.Windows.Forms.Button bt_ajouter_sous_categorie;
-        internal System.Windows.Forms.Button bt_ajouter_categorie;
-        internal System.Windows.Forms.DataGridView dgv_sous_categorie;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn4;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn7;
-        internal System.Windows.Forms.DataGridView dgv_categorie;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn5;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn6;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn3;
-        internal System.Windows.Forms.ComboBox cob_impression;
-        internal System.Windows.Forms.Button bt_parametre;
+        private System.Windows.Forms.DataGridViewLinkColumn col_prs_stat;
+        private System.Windows.Forms.DataGridViewImageColumn col_prs_impr;
+        private System.Windows.Forms.DataGridViewImageColumn col_prs_mod;
+        private System.Windows.Forms.DataGridViewImageColumn col_prs_sup;
     }
 }
 

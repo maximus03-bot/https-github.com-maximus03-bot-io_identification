@@ -41,6 +41,7 @@
             this.bt_enregistrer.TabIndex = 31;
             this.bt_enregistrer.Text = "Enregister";
             this.bt_enregistrer.UseVisualStyleBackColor = true;
+            this.bt_enregistrer.Click += new System.EventHandler(this.bt_enregistrer_Click);
             // 
             // txt_nom
             // 

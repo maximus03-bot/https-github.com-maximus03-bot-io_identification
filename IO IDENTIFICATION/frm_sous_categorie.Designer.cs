@@ -49,6 +49,7 @@
             this.bt_enregistrer.TabIndex = 28;
             this.bt_enregistrer.Text = "Enregister";
             this.bt_enregistrer.UseVisualStyleBackColor = true;
+            this.bt_enregistrer.Click += new System.EventHandler(this.bt_enregistrer_Click);
             // 
             // frm_sous_categorie
             // 
@@ -67,6 +68,7 @@
             this.Name = "frm_sous_categorie";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sous catégorie";
+            this.Load += new System.EventHandler(this.frm_sous_categorie_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

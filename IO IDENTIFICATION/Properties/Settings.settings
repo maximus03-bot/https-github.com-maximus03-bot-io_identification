@@ -5,8 +5,11 @@
     <Setting Name="chemin_bdd" Type="System.String" Scope="User">
       <Value Profile="(Default)">|DataDirectory|\io_identification.mdb</Value>
     </Setting>
-    <Setting Name="nom_piece" Type="System.String" Scope="User">
-      <Value Profile="(Default)">badge d'identité</Value>
+    <Setting Name="id_entite" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="type_piece" Type="System.String" Scope="User">
+      <Value Profile="(Default)">type 1</Value>
     </Setting>
   </Settings>
 </SettingsFile>
